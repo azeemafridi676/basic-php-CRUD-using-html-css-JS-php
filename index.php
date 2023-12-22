@@ -13,7 +13,6 @@
     <div class="left">
         <div class="item logo">
             <img  src="assets/logo.svg" alt="logo.svg">
-            <p class="logo-text">Ant Design Pro</p>
         </div>
         <div class="item">
             <a href="add.php">Add</a>
