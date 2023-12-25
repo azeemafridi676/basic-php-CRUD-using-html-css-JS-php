@@ -1,8 +1,8 @@
 <?php 
-    $sname = $_POST['sname'];
-    $saddress = $_POST['saddress'];
+    echo $sname = $_POST['sname'];
+    echo $saddress = $_POST['saddress'];
     echo $sclass = $_POST['sclass'];
-    $sphone = $_POST['sphone'];
+    echo $sphone = $_POST['sphone'];
 
     $dbservername = "localhost";
         $dbusername = "root";
@@ -13,7 +13,7 @@
             echo "<h1>error</h1>";
         }
 
-    // $sql = "INSERT INTO student(sname,saddress,sclass,sphone) VALUES('$sname','$saddress','$sclass','$sphone')";
-    // $connection->query($sql) or die("error in query");
+    $sql = "INSERT INTO student(sname,saddress,sclass,sphone) VALUES('$sname','$saddress','$sclass','$sphone')";
+    $connection->query($sql) or die("error in query");
     $connection->close();
 ?>

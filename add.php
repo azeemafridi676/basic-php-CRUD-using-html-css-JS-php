@@ -40,7 +40,7 @@ include "index.php"
                     <?php
                     while ($row = $result->fetch_assoc()) {
                     ?>
-                        <option value="<?php echo $row['cname'] ?>"><?php echo $row['cname'] ?> </option>
+                        <option value="<?php $row['cname'] ?>"><?php echo $row['cname'] ?> </option>
 
                     <?php } ?>
                 </select>
