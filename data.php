@@ -1,8 +1,8 @@
 <?php 
-    echo $sname = $_POST['sname'];
-    echo $saddress = $_POST['saddress'];
-    echo $sclass = $_POST['sclass'];
-    echo $sphone = $_POST['sphone'];
+    $sname = $_POST['sname'];
+    $saddress = $_POST['saddress'];
+    $sclass = $_POST['sclass'];
+    $sphone = $_POST['sphone'];
 
     $dbservername = "localhost";
         $dbusername = "root";
@@ -16,4 +16,5 @@
     $sql = "INSERT INTO student(sname,saddress,sclass,sphone) VALUES('$sname','$saddress','$sclass','$sphone')";
     $connection->query($sql) or die("error in query");
     $connection->close();
+    header("location:read.php");
 ?>

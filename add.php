@@ -33,19 +33,21 @@ include "index.php"
 
 
             <form action="data.php" method="post">
-                <input type="text" name="sname" placeholder="student name">
+                <input type="text" name="sname" placeholder="student name"><br>
                 <input type="text" name="saddress" placeholder="student address">
 
                 <select name="sclass" id="">
                     <?php
                     while ($row = $result->fetch_assoc()) {
                     ?>
-                        <option value="<?php $row['cname'] ?>"><?php echo $row['cname'] ?> </option>
+                        <option value="<?php echo $row['cname'] ?>"><?php echo $row['cname'] ?> </option>
 
                     <?php } ?>
                 </select>
             <?php
-        } ?>
+        } 
+        $connection->close();
+        ?>
             <input type="text" name="sphone" placeholder="student phone">
             <input type="submit">
 
